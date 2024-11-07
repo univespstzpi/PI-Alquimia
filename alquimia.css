@@ -138,9 +138,10 @@ footer{
 .endereco *{
     padding: 0;
     margin: 0;
+    margin-left: 10%;
     text-align: left;
-    margin-left: 30%;
-
+    text-decoration: none;
+    color: white;
 }
 
 .email{
@@ -159,6 +160,10 @@ footer{
 #sociais>a :hover{
     fill:yellow;
     box-shadow: 1px 1px 15px yellow;
+}
+
+.mapa :hover {
+    cursor: pointer;
 }
 
 .accessibility-button {
