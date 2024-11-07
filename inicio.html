@@ -58,7 +58,7 @@
           </div>
         </div>
       </nav>
-    </header>
+    </header>    
 
     <!--Titulo e imagem principal da pagina-->
     <main>
@@ -93,29 +93,38 @@
       </div>
       <h3>Todas as nossas cervejas são feitas com insumos importados e de alta qualidade. 100% PURO MALTE!</h3>
       <p>
-        <a href="cervejas.html" class="btn btn-lg btn-light fw-bold border-white bg-white">Conheça nossas cervejas</a>
+        <a href="cervejas.html" class="btn btn-lg btn-light fw-bold border-white bg-white" id="botao">Conheça nossas cervejas</a>
       </p>
     </section><hr>
 
     <!--Banner de Imagens/Promoções-->
-    <div id="banner">
-      <img class="slide" src="imagens/alq26.jpeg" alt="Slide 1">
-      <img class="slide" src="imagens/alq22.jpeg" alt="Slide 2">
-      <img class="slide" src="imagens/alq15.jpeg" alt="Slide 3">
-      <img class="slide" src="imagens/alq03.jpeg" alt="Slide 4">
-    </div>
+    <div class="slider">
+      <div class="slides">
+        <img class="slide" src="imagens/alq26.jpeg" alt="Slide 1">
+        <img class="slide" src="imagens/alq22.jpeg" alt="Slide 2">
+        <img class="slide" src="imagens/alq15.jpeg" alt="Slide 3">
+        <img class="slide" src="imagens/alq03.jpeg" alt="Slide 4">
+      </div>
+      <div class="navigation">
+        <button id="prev">❮</button>
+        <button id="next">❯</button>
+      </div>
+    </div><hr>
 
     <!--Informação de Localização e Mapa-->
     <footer id="rodape">
       <div>
         <img src="imagens/banner-alquimia.png" alt="logo" width="90%vw" height="180px">
       </div>
-      <div>
-        <h3>Localização da Alquimia Cervejaria</h3>
-        <address>Endereço: Avenida Maria Aparecida Andrade, 532, Jd. Veneto II<br> CEP 14169-632, Sertãozinho - SP</address>
-        <p>
-          Horário de funcionamento: Quarta à Sábado, 16:00 às 00:00. Domingo, 14:00 às 22:00.
-        </p>
+      <h3>Localização da Alquimia Cervejaria</h3>
+      <div class="endereco">
+        <address>Avenida Maria Aparecida Andrade, 532, Jd. Veneto II<br> CEP 14169-632, Sertãozinho - SP 
+        <a href="tel:+5516996247702"><br>Telefone 16996247702</a></address>
+        <p>Horário de funcionamento: </p>
+        <p>Quarta à Sábado, 16:00 às 00:00</p>
+        <p>Domingo, 14:00 às 22:00</p>
+      </div>
+
     <!--Redes Sociais-->
         <div id="sociais">
           <a href="https://instagram.com/alquimiacervejaria/" rel="noopener noreferrer" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-instagram" viewBox="0 0 16 16">
@@ -131,7 +140,7 @@
 
     <!--Mapa do Google-->
         <div id="mapa">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.2715218800213!2d-47.972094424740426!3d-21.141590080536048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b999ed5d2d28ef%3A0x96ca267f677408c!2sAlquimia%20Cervejaria%20Artesanal!5e0!3m2!1spt-BR!2sbr!4v1716501492225!5m2!1spt-BR!2sbr" width="60%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.2715218800213!2d-47.972094424740426!3d-21.141590080536048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b999ed5d2d28ef%3A0x96ca267f677408c!2sAlquimia%20Cervejaria%20Artesanal!5e0!3m2!1spt-BR!2sbr!4v1716501492225!5m2!1spt-BR!2sbr" width="90%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <p>
           Alquimia Cervejaria 2024. &copy;Todos os direitos Reservados.
@@ -160,25 +169,23 @@
   
   <!--Script Banner-->
   <script>
+    const slides = document.querySelector('.slides');
+    const slide = document.querySelectorAll('.slide');
     let currentIndex = 0;
-    const slides = document.querySelectorAll('.slide');
 
-    function showSlide(index) {
-      slides.forEach((slide, i) => {
-          slide.classList.remove('active');
-          if (i === index) {
-              slide.classList.add('active');
-          }
-      });
+    document.getElementById('next').addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % slide.length;
+      updateSlidePosition();
+    });
+
+    document.getElementById('prev').addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + slide.length) % slide.length;
+      updateSlidePosition();
+    });
+
+    function updateSlidePosition() {
+      slides.style.transform = `translateX(-${currentIndex * 100}%)`;
     }
-
-    function nextSlide() {
-        currentIndex = (currentIndex + 1) % slides.length;
-        showSlide(currentIndex);
-    }
-
-    setInterval(nextSlide, 3000); // Troca de slide a cada 3 segundos
-    showSlide(currentIndex); // Mostra o primeiro slide
   </script>
       
   <!--Script Acessibilidade-->
