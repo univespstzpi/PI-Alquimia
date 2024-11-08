@@ -61,7 +61,39 @@ section{
     margin: 15px;
     padding: 15px;
     gap: 30px 30px;
-    text-align: left;
+    text-align: justify;
+}
+
+.card-img-top{
+    height: 70vh;
+    padding: 15px;
+}
+
+.comprar{
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.comprar:hover{
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+}
+
+.quantidade>input{
+    border: none;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+.delivery {
+    margin: 0 auto;
+    text-align: center;
+    width: 70%;
+    animation-name: slidein;
+    animation-duration: 3s;
 }
 
 .btn:hover{
