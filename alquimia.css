@@ -123,6 +123,11 @@ section *{
     text-align: left;
 }
 
+#inAssunto{
+    width: 30%;
+    height: 30vh;
+}
+
 .btn:hover{
     color: white !important;
     background-color: black!important;
