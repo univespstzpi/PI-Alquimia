@@ -58,7 +58,7 @@ section *{
 
 .container-growler {
     display: grid;
-    grid-template-columns: 45vw 45vw;
+    grid-template-columns: repeat(auto-fit, 300px);
     grid-template-rows: auto auto;
     margin: 15px;
     padding: 15px;
@@ -69,6 +69,10 @@ section *{
     height: 70vh;
     padding: 15px;
     border: 1px solid black;
+}
+
+.card-text{
+    text-align: justify;
 }
 
 .comprar{
