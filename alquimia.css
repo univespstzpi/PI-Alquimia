@@ -114,6 +114,11 @@ section *{
     margin: 0 auto;
 }
 
+.enviar{
+    margin: 15px;
+    padding: 15px;
+}
+
 .form-check{
     text-align: left;
 }
