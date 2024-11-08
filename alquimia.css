@@ -111,7 +111,10 @@ section *{
 .carrinho{
     max-width: 90vw;
     margin: 30px;
-    padding: 15px;
+}
+
+.form-check{
+    text-align: left;
 }
 
 .btn:hover{
