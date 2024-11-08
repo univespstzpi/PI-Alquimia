@@ -54,17 +54,14 @@ section{
     margin: 5px;
 }
 
-.container-growler{
+.container-growler {
     display: grid;
-    grid-template-columns: 50% 50% 50%;
-    padding: 5px;
-    gap: 15px 15px;
-}
-
-.card-growler{
-    text-align: center;
-    width: 40vw;
-    height: 650px;
+    grid-template-columns: 45vw 45vw;
+    grid-template-rows: auto auto;
+    margin: 15px;
+    padding: 15px;
+    gap: 30px 30px;
+    text-align: left;
 }
 
 .btn:hover{

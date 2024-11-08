@@ -65,7 +65,7 @@
       <div id="titulo">
         <h1>NOSSAS CERVEJAS</h1>
         <h3>Da Pilsen à IPA: Qual a sua favorita?</h3>
-        <img src="imagens/alq15.jpeg" alt="growlers" width="85%" height="300px">
+        <img src="imagens/alq15.jpeg" alt="growlers">
       </div>
     </main><hr>
 
@@ -81,35 +81,23 @@
         <div class="card-body">
           <h5 class="card-title">Growler Pilsen 1L - R$ 15,00</h5>
           <p class="card-text">Cerveja do estilo Pilsen, muito leve e refrescante, baixo amargor. Alta drinkability. Harmoniza com pratos leves, saladas, comida japonesa.</p>
-          <div class="input-group mb-3">
-            <label class="input-group-text" for="inputGroupSelect01">Quantidade</label>
-            <select class="form-select" id="inputGroupSelect01">
-              <option selected>Adicione</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
-            </select>
+          <div class="quantidade">
+            <label class="input-text" for="inputGroupSelect01">Quantidade: </label> <input type="number" name="quantidade" id="inQuantidade">
+            <a href="carrinho.html" class="btn btn-primary">Comprar</a>
           </div>
-          <a href="checkout.html" class="btn btn-primary">Comprar</a>
+          
         </div>
       </div>
 
       <!--IPA Growler-->
       <div class="card-growler">
-        <img src="imagens/ipa.jpg" class="card-img-top" alt="growler>
+        <img src="imagens/ipa.jpg" class="card-img-top" alt="growler">
         <div class="card-body">
           <h5 class="card-title">Growler IPA 1L - R$ 19,00</h5>
           <p class="card-text">Cerveja do estilo IPA, encorpada, bem lupulada, com amargor mais pronunciado. Boa drinkability. Harmoniza com pratos mais condimentados e apimentados, carnes, defumados.</p>
           <div class="input-group mb-3">
-            <label class="input-group-text" for="inputGroupSelect01">Quantidade</label>
-            <select class="form-select" id="inputGroupSelect01">
+            <label class="input-group-text" for="inputGroupSelect02">Quantidade</label>
+            <select class="form-select" id="inputGroupSelect02">
               <option selected>Adicione</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -123,19 +111,19 @@
               <option value="10">10</option>
             </select>
           </div>
-          <a href="checkout.html" class="btn btn-primary">Comprar</a>
+          <a href="carrinho.html" class="btn btn-primary">Comprar</a>
         </div>
       </div>
 
       <!--WitBier Growler-->
       <div class="card-growler">
-        <img src="imagens/alq21.jpeg" class="card-img-top" alt="growler">
+        <img src="imagens/alq21.jpeg" class="card-img-top" alt="growler" height="800px">
         <div class="card-body">
           <h5 class="card-title">Growler Witbier 1L - R$ 18,00</h5>
           <p class="card-text">A cerveja Witbier é do estilo belga de trigo com adição de casca de laranja e coentro. Muito leve e com bastante aroma. Muito pouco amargor. Boa drinkability. Harmoniza com pratos leves, saladas, queijos menos condimentados.</p>
           <div class="input-group mb-3">
-            <label class="input-group-text" for="inputGroupSelect01">Quantidade</label>
-            <select class="form-select" id="inputGroupSelect01">
+            <label class="input-group-text" for="inputGroupSelect03">Quantidade</label>
+            <select class="form-select" id="inputGroupSelect03">
               <option selected>Adicione</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -149,7 +137,7 @@
               <option value="10">10</option>
             </select>
           </div>
-          <a href="checkout.html" class="btn btn-primary">Comprar</a>
+          <a href="carrinho.html" class="btn btn-primary">Comprar</a>
         </div>
       </div>
 
@@ -160,8 +148,8 @@
           <h5 class="card-title">Growler Stout 1L - R$ 18,00</h5>
           <p class="card-text">A cerveja Stout é feita com maltes escuros um pouco mais torrados e são inconfundíveis no sabor, aroma e cor. Muito pouco amargor. Boa drinkability. Harmoniza com pratos mais gordurosos, feijoada, mas vai bem até com sobremesas de chocolate.</p>
           <div class="input-group mb-3">
-            <label class="input-group-text" for="inputGroupSelect01">Quantidade</label>
-            <select class="form-select" id="inputGroupSelect01">
+            <label class="input-group-text" for="inputGroupSelect04">Quantidade</label>
+            <select class="form-select" id="inputGroupSelect04">
               <option selected>Adicione</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -175,7 +163,7 @@
               <option value="10">10</option>
             </select>
           </div>
-          <a href="checkout.html" class="btn btn-primary">Comprar</a>
+          <a href="carrinho.html" class="btn btn-primary">Comprar</a>
         </div>
       </div>
 
@@ -188,21 +176,17 @@
       </p>
     </section><hr>
 
-    <section class="barril">
-      <div class="container-barril">
-        <div class="card-barril">
-          <img src="imagens/alq20.jpeg" class="card-img-top" alt="barril">
+    <section class="delivery">
+      <h3>Temos barris de chope sob encomenda</h3>
+      <div class="container-delivery">
+        <div class="card-delivery">
+          <img src="imagens/delivery-alquimia.jpg" class="card-img-top" alt="delivery">
           <div class="card-body">
             <p class="card-text">Conheça a nossa Cerveja Artesanal da Alquimia. Produzimos constantemente vários estilos entre eles: Pilsen, IPA, Stout, Witbier, Red Ale e outros.</p>
           </div>
         </div>
       </div>
 
-
-      <h3>Todas as nossas cervejas são feitas com insumos importados e de alta qualidade! 100% PURO MALTE!</h3>
-      <p>
-        <a href="carrinho.html" class="btn btn-lg btn-light fw-bold border-white bg-white" id="botao">Ir para o carrinho</a>
-      </p>
     </section><hr>
 
     <!--Banner de Imagens/Promoções-->
