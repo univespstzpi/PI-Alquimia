@@ -108,6 +108,11 @@ section *{
     animation-duration: 3s;
 }
 
+.carrinho{
+    margin: 30px;
+    padding-bottom: 30px;
+}
+
 .btn:hover{
     color: white !important;
     background-color: black!important;
