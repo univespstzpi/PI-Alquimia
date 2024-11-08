@@ -196,6 +196,7 @@ footer{
     animation-name: slidein;
     animation-delay: 4s;
     animation-duration: 3s;
+    margin: 15px;
 }
 
 .endereco *{
