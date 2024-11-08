@@ -38,7 +38,7 @@ h1, h3{
     padding: 10px 50px;
 }
 
-section{
+section *{
     text-align: center;
     animation-duration: 4s;
     animation-name: slidein;
@@ -46,12 +46,13 @@ section{
 }
 
 .container{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    gap: 10px;
 }
 
 .card{
-    width: 30vw;
-    margin: 5px;
+    text-align: center;
 }
 
 .container-growler {
@@ -67,6 +68,7 @@ section{
 .card-img-top{
     height: 70vh;
     padding: 15px;
+    border: 1px solid black;
 }
 
 .comprar{
