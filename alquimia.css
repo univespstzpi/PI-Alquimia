@@ -109,6 +109,11 @@ section *{
     margin: 30px;
 }
 
+.cadastro *{
+    text-align: center;
+    margin: 0 auto;
+}
+
 .form-check{
     text-align: left;
 }
