@@ -49,12 +49,13 @@
               </li>
             </ul>
 
-            <!--Formulario de busca-->
-            <form id="busca" class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Busca" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Busca</button>
-            </form>
-
+            <!--Chatbot - Perguntas e respostas-->
+            <div id="chatbot">
+            <h3>Chat da Cervejaria</h3>
+            <div id="chat-container"></div>
+            <input type="text" id="user-input" placeholder="O que você gostaria de saber, tipos de cervejas, horário de funcionamento, onde fica a cervejaria..." onkeypress="if(event.keyCode==13) sendMessage()">
+            </div>
+        
           </div>
         </div>
       </nav>
@@ -226,6 +227,8 @@
       document.body.style.backgroundColor = 'black';
     }
   </script>
+  
+  <script src="chatbot.js"></script>
 
   </body>
 

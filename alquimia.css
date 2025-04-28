@@ -13,9 +13,18 @@ body {
     margin-left: 10%;
 }
 
-form#busca{
-    margin-right: 10%;
+div#chatbot{
+    max-width: 50%;
 }
+div#chatbot h3{
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+#user-input { width: 100%; padding: 10px;}
+.user { color: blue; }
+.bot { color: black; }
+
 
 #logo {
     text-align: center;
