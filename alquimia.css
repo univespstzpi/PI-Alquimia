@@ -24,7 +24,6 @@ body {
     right: 20px;
     z-index: 1000;
     cursor: pointer;
-    /* Adicione efeitos visuais se quiser */
   }
   
   /* Caixa do chatbot (escondida por padrão) */
@@ -34,7 +33,7 @@ body {
     right: 20px;
     width: 320px;
     max-width: 90vw;
-    height: 400px;
+    height: fit-content;
     background: #fff;
     border: 1px solid #ccc;
     border-radius: 12px;
