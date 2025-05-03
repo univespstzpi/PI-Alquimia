@@ -109,16 +109,17 @@
       </div>
     </div><hr>
 
-    <!-- Ícone do chatbot -->
-  <div id="chatbot-icon" class="chatbot-icon">
-    <img src="imagens/chatboximg.jpg" alt="Chatbot" width="60" height="60">
-  </div>
+      <!-- Ícone do chatbot -->
+    <div id="chatbot-icon" class="chatbot-icon">
+      <img src="imagens/chatboximg.jpg" alt="Chatbot" width="60" height="60">
+    </div>
 
-  <!-- Caixa do chatbot (inicialmente escondida) -->
-  <div id="chatbot-box" class="chatbot-box">
-      <div id="chat-container"></div>
-      <input type="text" id="user-input" placeholder="Chat da Cervejaria" onkeypress="if(event.keyCode==13) sendMessage()">
-  </div>
+    <!-- Caixa do chatbot (inicialmente escondida) -->
+    <div id="chatbot-box" class="chatbot-box">
+        <div id="chat-container"></div>
+        <input type="text" id="user-input" placeholder="Chat da Cervejaria" onkeypress="if(event.keyCode==13) sendMessage()">
+        <button id="clear-chat" class="clear-chat-btn">Limpar chat</button>
+    </div>
 
     <!--Informação de Localização e Mapa-->
     <footer id="rodape">
@@ -236,9 +237,17 @@
   <script>
   const icon = document.getElementById('chatbot-icon');
   const box = document.getElementById('chatbot-box');
+  const clearBtn = document.getElementById('clear-chat');
+  const chatMessages = document.getElementById('chat-container');
+
 
   icon.addEventListener('click', () => {
   box.style.display = box.style.display === 'block' ? 'none' : 'block';
+  });
+
+  // Limpa o conteúdo das mensagens do chat ao clicar no botão
+  clearBtn.addEventListener('click', () => {
+  chatMessages.innerHTML = '';
   });
   </script>
 
