@@ -13,18 +13,37 @@ body {
     margin-left: 10%;
 }
 
-div#chatbot{
-    max-width: 50%;
-}
-div#chatbot h3{
-    color: black;
-    margin: 0;
-    padding: 0;
-}
-#user-input { width: 100%; padding: 10px;}
+#user-input { width: 100%;}
 .user { color: blue; }
 .bot { color: black; }
 
+/* Ícone fixo no canto inferior direito */
+.chatbot-icon {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    z-index: 1000;
+    cursor: pointer;
+    /* Adicione efeitos visuais se quiser */
+  }
+  
+  /* Caixa do chatbot (escondida por padrão) */
+  .chatbot-box {
+    position: fixed;
+    bottom: 140px; /* Acima do ícone */
+    right: 20px;
+    width: 320px;
+    max-width: 90vw;
+    height: 400px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    display: none; /* Esconde por padrão */
+    z-index: 1001;
+    padding: 16px;
+  }
+  
 
 #logo {
     text-align: center;

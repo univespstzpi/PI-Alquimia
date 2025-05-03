@@ -48,14 +48,7 @@
                 <a class="nav-link active" aria-current="page" href="cadastro.html">CADASTRE-SE</a>
               </li>
             </ul>
-
-            <!--Chatbot - Perguntas e respostas-->
-            <div id="chatbot">
-            <h3>Chat da Cervejaria</h3>
-            <div id="chat-container"></div>
-            <input type="text" id="user-input" placeholder="O que você gostaria de saber, tipos de cervejas, horário de funcionamento, onde fica a cervejaria..." onkeypress="if(event.keyCode==13) sendMessage()">
-            </div>
-        
+                   
           </div>
         </div>
       </nav>
@@ -115,6 +108,17 @@
         <button id="next">❯</button>
       </div>
     </div><hr>
+
+    <!-- Ícone do chatbot -->
+  <div id="chatbot-icon" class="chatbot-icon">
+    <img src="imagens/chatboximg.jpg" alt="Chatbot" width="60" height="60">
+  </div>
+
+  <!-- Caixa do chatbot (inicialmente escondida) -->
+  <div id="chatbot-box" class="chatbot-box">
+      <div id="chat-container"></div>
+      <input type="text" id="user-input" placeholder="Chat da Cervejaria" onkeypress="if(event.keyCode==13) sendMessage()">
+  </div>
 
     <!--Informação de Localização e Mapa-->
     <footer id="rodape">
@@ -228,6 +232,16 @@
     }
   </script>
   
+  <!--Script Chatbot-->
+  <script>
+  const icon = document.getElementById('chatbot-icon');
+  const box = document.getElementById('chatbot-box');
+
+  icon.addEventListener('click', () => {
+  box.style.display = box.style.display === 'block' ? 'none' : 'block';
+  });
+  </script>
+
   <script src="chatbot.js"></script>
 
   </body>
